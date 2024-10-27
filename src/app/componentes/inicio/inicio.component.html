@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio - Mercy Developer</title>
+    <link rel="stylesheet" href="">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="cover">
+        <h1>Mercy Developer</h1>
+        <p>Servicios para todas tus necesidades informáticas.</p>
+    </div>
+
+    <br>
+    <div class="container">
+        <h2 class="text-center">Servicios Especializados</h2>
+        <div class="card-group">
+            <div class="card">
+                <img src="assets/Instalación de Sistemas Operativos.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Instalación de Sistemas Operativos</h5>
+                    <p class="card-text">Ofrecemos instalación y configuración de sistemas operativos para asegurar un funcionamiento óptimo de tu equipo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/Instalación de Software de Oficina.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Instalación de Software de Oficina</h5>
+                    <p class="card-text">Instalamos y configuramos software de oficina para que puedas ser más productivo en tu trabajo diario.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/Reparación de Computadoras.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Reparación de Computadoras</h5>
+                    <p class="card-text">Brindamos servicios de reparación de computadoras para solucionar cualquier inconveniente técnico que puedas tener.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <div class="container">
+        <h2 class="text-center">Formulario de Contacto</h2>
+        <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+    
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre" required
+                    placeholder="Ingresa tu nombre">
+            </div>
+    
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" formControlName="apellido" required
+                    placeholder="Ingresa tu apellido">
+            </div>
+    
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" formControlName="mensaje" rows="3" required
+                    placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+    
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck1">Consulta</label>
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck2">Solitacion de servicios</label>
+            </div>
+    
+            <br><br>
+    
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+        <br>
+        <div class="row">
+            <p *ngIf="datos_formulario != null">¡Gracias, <b>{{datos_formulario.nombre}} {{datos_formulario.apellido}}</b>!
+                Tu
+                formulario ha sido enviado exitosamente.</p>
+            <p *ngIf="datos_formulario != null">Recibirás una respuesta en las próximas 24 horas.</p>
+        </div>
+    </div>
+<br>
+</body>
+</html>

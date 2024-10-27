@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps with Bootstrap</title>
+    <link rel="stylesheet" href="">
+    <style>
+    </style>
+</head>
+<body>
+
+<div class="cover">
+    <h1>Visítanos en Mercy Developer</h1>
+    <p>Descubre nuestros servicios técnicos informáticos en nuestra sede. ¡Te esperamos!</p>
+</div>
+
+
+<br>
+
+    <div class="">
+        <div class="">
+            <div class="">
+                <iframe
+                id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d472.99834641602627!2d-70.29146582249166!3d-18.484258401254085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa997e88ae0e3%3A0x3d94d0eaeff916ef!2sCFT%20Tarapaca!5e0!3m2!1sen!2scl!4v1730007675052!5m2!1sen!2scl"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                </div>
+        </div>
+    </div>
+    <br>
+
+
+<div class="container">
+    <h2 class="text-center">Formulario de Contacto</h2>
+    <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" formControlName="nombre" required
+                placeholder="Ingresa tu nombre">
+        </div>
+
+        <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" formControlName="apellido" required
+                placeholder="Ingresa tu apellido">
+        </div>
+
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" formControlName="mensaje" rows="3" required
+                placeholder="Escribe tu mensaje aquí"></textarea>
+        </div>
+
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck1">Consulta</label>
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck2">Solitacion de servicios</label>
+        </div>
+
+        <br><br>
+
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+    <br>
+    <div class="row">
+        <p *ngIf="datos_formulario != null">¡Gracias, <b>{{datos_formulario.nombre}} {{datos_formulario.apellido}}</b>!
+            Tu
+            formulario ha sido enviado exitosamente.</p>
+        <p *ngIf="datos_formulario != null">Recibirás una respuesta en las próximas 24 horas.</p>
+    </div>
+</div>
+
+</body>
+</html>

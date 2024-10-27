@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="">
+    <style>
+    </style>
+</head>
+<body>
+
+  <div class="cover">
+    <h1>Contáctanos</h1>
+    <p>Estamos aquí para ayudarte. Completa el formulario y te responderemos a la brevedad.</p>
+    </div>
+<br>
+    <div class="container">
+        <h2 class="text-center">Red Social</h2>
+        <div class="card-group">
+            <div class="card">
+              <a href="https://www.facebook.com">
+                <img src="assets/facebook.jpg" class="card-img-top" alt="Facebook">
+              </a>
+                <div class="card-body">
+                    <h5 class="card-title">Facebook</h5>
+                    <p class="card-text">Síguenos en Facebook para más actualizaciones.</p>
+                </div>
+            </div>
+            <div class="card">
+              <a href="https://www.instagram.com">
+                <img src="assets/instagram.jpg" class="card-img-top" alt="Instagram">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Instagram</h5>
+                    <p class="card-text">Síguenos en Instagram y comparte tus momentos.</p>
+                </div>
+            </div>
+            <div class="card">
+              <a href="https://www.twitter.com">
+                <img src="assets/twitter.png" class="card-img-top" alt="Twitter">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Twitter</h5>
+                    <p class="card-text">Mantente informado a través de nuestro Twitter.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+<br>
+
+<div class="container">
+  <h2 class="text-center">Formulario de Contacto</h2>
+  <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre" required
+        placeholder="Ingresa tu nombre">
+    </div>
+    <div class="mb-3">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="apellido" formControlName="apellido" required
+        placeholder="Ingresa tu apellido">
+    </div>
+    <div class="mb-3">
+      <label for="correo" class="form-label">Correo</label>
+      <input type="email" class="form-control" id="correo" formControlName="correo" required
+        placeholder="Ingresa tu correo">
+    </div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input type="tel" class="form-control" id="telefono" formControlName="telefono" required
+        placeholder="Ingresa tu teléfono">
+    </div>
+    <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <textarea class="form-control" id="mensaje" formControlName="mensaje" rows="3" required
+        placeholder="Escribe tu mensaje aquí"></textarea>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+      <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btncheck1">Consulta</label>
+      <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btncheck2">Solitacion de servicios</label>
+    </div>
+    <br><br>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+</form>
+<br>
+  <div class="row">
+    <p *ngIf="datos_formulario != null">¡Gracias, <b>{{datos_formulario.nombre}} {{datos_formulario.apellido}}</b>! Tu
+      formulario ha sido enviado exitosamente.</p>
+    <p *ngIf="datos_formulario != null">Recibirás una respuesta en las próximas 24 horas.</p>
+  </div>
+</div>
+
+</body>
+</html>

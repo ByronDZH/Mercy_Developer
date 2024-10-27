@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 20px;
+}
+.cover {
+    background-color: #007bff;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container-map {
+    max-width: 1500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make the iframe responsive */
+#map {
+    width: 100%;
+    /* Make width 100% of the container */
+    height: 750px;
+    /* Set a fixed height */
+    border: 0;
+    /* Remove default border */
+}
