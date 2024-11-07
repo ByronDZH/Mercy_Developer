@@ -15,7 +15,7 @@ body {
 }
 
 .cover {
-    background-color: #007bff; /* Primary color */
+    background-color: #007bff;
     color: white;
     padding: 50px 20px;
     text-align: center;
@@ -29,4 +29,12 @@ body {
 .card {
     margin: 10px;
     flex: 1;
+}
+
+.b {
+    color: blue;
+}
+
+.font {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }

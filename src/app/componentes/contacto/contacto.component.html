@@ -8,7 +8,7 @@
     <style>
     </style>
 </head>
-<body>
+<body class="font">
 
   <div class="cover">
     <h1>Contáctanos</h1>
@@ -90,10 +90,8 @@
     <button class="btn btn-primary" type="submit">Enviar</button>
 </form>
 <br>
-  <div class="row">
-    <p *ngIf="datos_formulario != null">¡Gracias, <b>{{datos_formulario.nombre}} {{datos_formulario.apellido}}</b>! Tu
-      formulario ha sido enviado exitosamente.</p>
-    <p *ngIf="datos_formulario != null">Recibirás una respuesta en las próximas 24 horas.</p>
+  <div class="row" class="b">
+    <p *ngIf="datos_formulario != null">Hola <b>{{datos_formulario.nombre}} {{datos_formulario.apellido}}</b>, su mensaje ha sido enviado correctamente.</p>
   </div>
 </div>
 

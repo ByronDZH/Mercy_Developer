@@ -1,8 +1,8 @@
 body {
-    background-color: #f8f9fa; /* Color de fondo claro */
+    background-color: #f8f9fa;
 }
 .cover {
-    background-color: #007bff; /* Color primario */
+    background-color: #007bff;
     color: white;
     padding: 50px 20px;
     text-align: center;
@@ -21,4 +21,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.font {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }

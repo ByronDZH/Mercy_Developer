@@ -28,12 +28,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Make the iframe responsive */
 #map {
     width: 100%;
-    /* Make width 100% of the container */
     height: 750px;
-    /* Set a fixed height */
     border: 0;
-    /* Remove default border */
+}
+
+.b {
+    color: blue;
+}
+
+.font {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }

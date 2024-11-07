@@ -8,7 +8,7 @@
     <style>
     </style>
 </head>
-<body>
+<body class="font">
 
 <div class="cover">
     <h1>Visítanos en Mercy Developer</h1>
@@ -33,26 +33,35 @@
     <br>
 
 
-<div class="container">
-    <h2 class="text-center">Formulario de Contacto</h2>
-    <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
 
-        <div class="mb-3">
+    <div class="container">
+        <h2 class="text-center">Formulario de Contacto</h2>
+        <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" formControlName="nombre" required
-                placeholder="Ingresa tu nombre">
+        placeholder="Ingresa tu nombre">
         </div>
-
         <div class="mb-3">
             <label for="apellido" class="form-label">Apellido</label>
             <input type="text" class="form-control" id="apellido" formControlName="apellido" required
-                placeholder="Ingresa tu apellido">
+            placeholder="Ingresa tu apellido">
         </div>
-
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="correo" formControlName="correo" required
+        placeholder="Ingresa tu correo">
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" formControlName="telefono" required
+            placeholder="Ingresa tu teléfono">
+        </div>
         <div class="mb-3">
             <label for="mensaje" class="form-label">Mensaje</label>
             <textarea class="form-control" id="mensaje" formControlName="mensaje" rows="3" required
-                placeholder="Escribe tu mensaje aquí"></textarea>
+            placeholder="Escribe tu mensaje aquí"></textarea>
         </div>
 
         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -61,19 +70,14 @@
             <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
             <label class="btn btn-outline-primary" for="btncheck2">Solitacion de servicios</label>
         </div>
-
         <br><br>
-
         <button class="btn btn-primary" type="submit">Enviar</button>
     </form>
     <br>
-    <div class="row">
-        <p *ngIf="datos_formulario != null">¡Gracias, <b>{{datos_formulario.nombre}} {{datos_formulario.apellido}}</b>!
-            Tu
-            formulario ha sido enviado exitosamente.</p>
-        <p *ngIf="datos_formulario != null">Recibirás una respuesta en las próximas 24 horas.</p>
+        <div class="row" class="b">
+          <p *ngIf="datos_formulario != null">Hola <b>{{datos_formulario.nombre}} {{datos_formulario.apellido}}</b>, su mensaje ha sido enviado correctamente.</p>
+        </div>
     </div>
-</div>
 
 </body>
 </html>

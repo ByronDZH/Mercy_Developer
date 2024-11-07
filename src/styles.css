@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Comic Sans MS'; 
+    src: local('Comic Sans MS'), local('ComicSansMS');
+    font-weight: normal;
+    font-style: normal;
+}
